@@ -1,0 +1,8 @@
+{% extends "blogs/base.html" %}
+{% block title %}
+    {{user.username}}
+{% endblock title %}
+{% block content %}
+    <p>Username: {{user.username}} - Password: {{user.password}}</p>
+    <p>{{user.date}}</p>
+{% endblock content %}
