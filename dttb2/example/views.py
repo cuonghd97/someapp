@@ -11,10 +11,11 @@ def index(request):
     data = []
     table_data = table.objects.all()
     for dt in table_data:
-        data.append([dt.names, dt.age])
+        data.append([dt.id, dt.names, dt.age])
     datas = {"data": data}
     json_datas = json.loads(json.dumps(datas))
     # json = serializers.serialize('json', table_data)
+    datajs = json.dumps(datas)
     return JsonResponse(json_datas)
 
 def dttable(request):

@@ -1,27 +1,39 @@
 $(document).ready(function () {
-
     var table = $('#example').DataTable({
         "ajax": {
             "type": "GET",
             "url": "/index",
             "contentType": "application/json; charset=utf-8",
             "data": function (result) {
-                return JSON.stringify(result)
+                data = JSON.stringify(result)
+                return data
             },
-            "displayLength": 10
+            "displayLength": 10,
         },
         "columnDefs": [ {
-            "targets": 2,
+            "targets": 3,
             "data": null,
             "defaultContent": "<button>Click!</button>"
         } ],
         createdRow: function( row, data, dataIndex ) {
-            // Set the data-status attribute, and add a class
-            $( row ).find('td:eq(0)')
-                .attr('data-status', data.status ? 'locked' : 'unlocked')
-                .addClass('asset-context box');
-        }
+            $(row).find('button').attr('data-id', data[0]).attr('data-toggle', 'modal').attr('data-target', '#myModal');
+        },
+        
     })
+    // $('body').on('click','button', function() {
+    //     console.log($(this).data('id'));
+    // });
+    $('#example tbody').on( 'click', 'button', function () {
+        let data = table.row( $(this).parents('tr') ).data();
+        $("#name").val(data[1]);
+        $("#age").val(data[2]);
+        $("#id").val(data[0]);
+    } );
 
-    
+    // $("#btnpost").on("click", function () {
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: 
+    //     })
+    // });
 });
