@@ -38,8 +38,8 @@
                     <h4 class="modal-title">Modal Header</h4>
                 </div>
                 <div class="modal-body">
-                    {% csrf_token %}
                     <p>Some text in the modal.</p>
+                    {% csrf_token %}
                     <input type="hidden" name="id" id="id">
                     <p>
                         <label for="name">Name</label>
@@ -51,7 +51,7 @@
                     </p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default btnpost" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" id="btnpost" data-dismiss="modal">Submit</button>
                 </div>
             </div>
 

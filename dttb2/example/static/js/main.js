@@ -30,10 +30,25 @@ $(document).ready(function () {
         $("#id").val(data[0]);
     } );
 
-    // $("#btnpost").on("click", function () {
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: 
-    //     })
-    // });
+    $("#btnpost").on("click", function () {
+        var id = $("#id").val()
+        var names = $("#name").val()
+        var age = $("#age").val()
+        $.ajax({
+            type: 'POST',
+            url: location.href,
+            data: {
+                'id': id,
+                'names': names,
+                'age': age,
+                csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+            },
+            success: function () {
+                // $("#myModal").modal('hide')
+                console.log(id + " " + names + " " + age)
+                // alert("success")
+                $('#example').DataTable().ajax.reload(null,false);
+            }
+        })
+    });
 });

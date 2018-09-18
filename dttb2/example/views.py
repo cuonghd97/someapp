@@ -19,4 +19,10 @@ def index(request):
     return JsonResponse(json_datas)
 
 def dttable(request):
+    response = HttpResponse()
+    if request.method == 'POST':
+        a = table.objects.get(id = request.POST['id'])
+        a.names = request.POST['names']
+        a.age = request.POST['age']
+        a.save()
     return render(request, 'pages/home.html')
