@@ -47,7 +47,8 @@ $(document).ready(function () {
                 // $("#myModal").modal('hide')
                 console.log(id + " " + names + " " + age)
                 // alert("success")
-                $('#example').DataTable().ajax.reload(null,false);
+                // $('#example').DataTable().ajax.reload(null,false);
+                table.ajax.reload(null, false)
             }
         })
     });
