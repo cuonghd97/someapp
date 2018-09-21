@@ -1,0 +1,68 @@
+{% extends "pages/base.html" %}
+{% load staticfiles %}
+{% block content %}
+<!--<form action="" method="post">
+    {% csrf_token %}
+    <p>
+        <label for="{{ form.username.id_for_label }}">username</label>
+        {{ form.userName }}
+    </p>
+
+    <p>
+        <label for="{{ form.email.id_for_label }}">email</label>
+        {{ form.email }}
+    </p>
+
+    <p>
+        <label for="{{ form.birthday.id_for_label }}">Birthday</label>
+        {{ form.birthday }}
+    </p>
+
+    <p>
+        <input type="submit" value="submit">
+    </p>-->
+    <div class="container">
+        <div class="row main">
+            <div class="main-login main-center">
+                <h5>Sign up once and watch any of our free demos.</h5>
+                <form class="" method="post" action="#">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="userName" id="userName" placeholder="Enter your Name" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthday" class="cols-sm-2 control-label">Birthday</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="birthday" id="birthday" placeholder="Enter your Birthday" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Subit">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock content %}
