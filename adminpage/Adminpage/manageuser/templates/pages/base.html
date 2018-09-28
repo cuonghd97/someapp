@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="{% static 'image/png' %}" sizes="16x16" href="images/logo.png">
+    <title>Fi.Hp</title>
+
+    <link href="{% static 'css/lib/chartist/chartist.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lib/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/lib/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/lib/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'css/helper.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!--Data table-->
+    <link rel="stylesheet" href="{% static 'DataTables/datatables.css' %}">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader" style="display: none;">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>
+        </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <!-- header header  -->
+        <div class="header" style="">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        Fi.Hp
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i
+                                    class="mdi mdi-menu"></i></a> </li>
+                        <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <!-- Messages -->
+                        <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle text-muted  "
+                                href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th-large"></i></a>
+                            <div class="dropdown-menu animated zoomIn">
+                                <ul class="mega-dropdown-menu row">
+
+
+                                    <li class="col-lg-3  m-b-30">
+                                        <h4 class="m-b-20">CONTACT US</h4>
+                                        <!-- Contact -->
+                                        <form>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="exampleInputname1"
+                                                    placeholder="Enter Name"> </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Enter email">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control" id="exampleTextarea" rows="3"
+                                                    placeholder="Message"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                        </form>
+                                    </li>
+                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                        <h4 class="m-b-20">List style</h4>
+                                        <!-- List style -->
+                                        <ul class="list-style-none">
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                        <h4 class="m-b-20">List style</h4>
+                                        <!-- List style -->
+                                        <ul class="list-style-none">
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="col-lg-3 col-xlg-3 m-b-30">
+                                        <h4 class="m-b-20">List style</h4>
+                                        <!-- List style -->
+                                        <ul class="list-style-none">
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>
+                                                    This
+                                                    Is Another Link</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Messages -->
+                    </ul>
+                    <!-- User profile and search -->
+                    <ul class="navbar-nav my-lg-0">
+
+                        <!-- Search -->
+                        <li class="nav-item hidden-sm-down search-box"> <a class="nav-link hidden-sm-down text-muted  "
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search" style="display: none;">
+                                <input type="text" class="form-control" placeholder="Search here"> <a class="srh-btn"><i
+                                        class="ti-close"></i></a> </form>
+                        </li>
+                        <!-- Comment -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted text-muted" href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-bell"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">Notifications</div>
+                                    </li>
+                                    <li style="overflow: visible;">
+                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 250px;">
+                                            <div class="message-center" style="overflow: hidden; width: auto; height: 250px;">
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="btn btn-danger btn-circle m-r-10"><i class="fa fa-link"></i></div>
+                                                    <div class="mail-contnet">
+                                                        <h5>This is title</h5> <span class="mail-desc">Just see the my
+                                                            new admin!</span>
+                                                        <span class="time">9:30 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="btn btn-success btn-circle m-r-10"><i class="ti-calendar"></i></div>
+                                                    <div class="mail-contnet">
+                                                        <h5>This is another title</h5> <span class="mail-desc">Just a
+                                                            reminder
+                                                            that you have event</span> <span class="time">9:10 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="btn btn-info btn-circle m-r-10"><i class="ti-settings"></i></div>
+                                                    <div class="mail-contnet">
+                                                        <h5>This is title</h5> <span class="mail-desc">You can
+                                                            customize this
+                                                            template as you want</span> <span class="time">9:08 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="btn btn-primary btn-circle m-r-10"><i class="ti-user"></i></div>
+                                                    <div class="mail-contnet">
+                                                        <h5>This is another title</h5> <span class="mail-desc">Just see
+                                                            the my
+                                                            admin!
+                                                        </span> <span class="time">9:02 AM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div>
+                                            <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>Check all
+                                                notifications</strong>
+                                            <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Comment -->
+                        <!-- Messages -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-envelope"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">You have 4 new messages</div>
+                                    </li>
+                                    <li style="overflow: visible;">
+                                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 250px;">
+                                            <div class="message-center" style="overflow: hidden; width: auto; height: 250px;">
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="user-img"> <img src="images/users/Cuong.jpg" alt="user"
+                                                            class="img-circle"> <span class="profile-status online pull-right"></span>
+                                                    </div>
+                                                    <div class="mail-contnet">
+                                                        <h5>Cuong Hoang</h5> <span class="mail-desc">Just see the my
+                                                            admin!</span>
+                                                        <span class="time">9:30 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="user-img"> <img src="images/users/nhung.jpg" alt="user"
+                                                            class="img-circle"> <span class="profile-status busy pull-right"></span>
+                                                    </div>
+                                                    <div class="mail-contnet">
+                                                        <h5>Nhung Nguyen</h5> <span class="mail-desc">I've sung a song!
+                                                            See you
+                                                            at
+                                                        </span>
+                                                        <span class="time">9:10 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="user-img"> <img src="images/users/huong.jpg" alt="user"
+                                                            class="img-circle"> <span class="profile-status away pull-right"></span>
+                                                    </div>
+                                                    <div class="mail-contnet">
+                                                        <h5>Huong Nguyen</h5> <span class="mail-desc">I am a singer!</span>
+                                                        <span class="time">9:08 AM</span>
+                                                    </div>
+                                                </a>
+                                                <!-- Message -->
+                                                <a href="#">
+                                                    <div class="user-img"> <img src="images/users/thoa.jpg" alt="user"
+                                                            class="img-circle"> <span class="profile-status offline pull-right"></span>
+                                                    </div>
+                                                    <div class="mail-contnet">
+                                                        <h5>Thoa Nguyen</h5> <span class="mail-desc">Just see the my
+                                                            admin!</span>
+                                                        <span class="time">9:02 AM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 174.581px;"></div>
+                                            <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center" href="javascript:void(0);"> <strong>See all
+                                                e-Mails</strong>
+                                            <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- End Messages -->
+                        <!-- Profile -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="images/users/1.jpg" alt="user"
+                                    class="profile-pic"></a>
+                            <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                                <ul class="dropdown-user">
+                                    <li><a href="account.html"><i class="ti-user"></i> Account</a></li>
+                                    <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                                    <li><a href="#"><i class="ti-settings"></i> Setting</a></li>
+                                    <li><a href="index-client.html"><i class="fa fa-power-off"></i> Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End header header -->
+        <!-- Left Sidebar  -->
+        <div class="left-sidebar" style="overflow: visible;">
+            <!-- Sidebar scroll-->
+            <div class="slimScrollDiv" style="position: relative; overflow: visible; width: auto; height: 100%;">
+                <div class="scroll-sidebar" style="overflow: hidden; width: auto; height: 100%;">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav active">
+                        <ul id="sidebarnav" class="in">
+                            <li class="nav-devider"></li>
+                            <li class="nav-label">Tài khoản người dùng</li>
+                            <li class="active">
+                                <a class="has-arrow active" href="index.html" aria-expanded="false">
+                                    <i class="c-blue-500 ti-home"></i>
+                                    <span class="hide-menu">Trang chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <i class="fa fa-book"></i>
+                                    <span class="hide-menu">Tiện ích<span class="label label-rouded label-primary pull-right">1</span></span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Hướng dẫn sử dụng</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <i class="c-blue-500 ti-user"></i>
+                                    <span class="hide-menu">Thông tin người dùng<span class="label label-rouded label-success pull-right">3</span></span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="/informations/">Quản lý</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <i class="c-blue-500 ti-bag"></i>
+                                    <span class="hide-menu">Dịch vụ<span class="label label-rouded label-danger pull-right">6</span></span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Giúp việc gia đình</a></li>
+                                    <li><a href="#">Chăm sóc người già/người bệnh</a></li>
+                                    <li><a href="#">Chăm sóc trẻ em</a></li>
+                                    <li><a href="#">Giúp việc theo giờ</a></li>
+                                    <li><a href="#">Chuyển nhà</a></li>
+                                    <li><a href="#">Phá/Đập nhà</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-newspaper-o"></i>
+                                    <span class="hide-menu">Quản lý tin tức</span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Compose</a></li>
+                                    <li><a href="#">Read</a></li>
+                                    <li><a href="#">Inbox</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false"><i class="c-brown-500 ti-email"></i>
+                                    <span class="hide-menu">Email</span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="#">Compose</a></li>
+                                    <li><a href="#">Read</a></li>
+                                    <li><a href="#">Inbox</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="has-arrow" href="#" aria-expanded="false">
+                                    <i class="fa fa-bar-chart"></i>
+                                    <span class="hide-menu">Biểu đồ</span>
+                                </a>
+                                <ul aria-expanded="false" class="collapse">
+                                    <li><a href="chart-flot.html">Flot</a></li>
+                                    <li><a href="chart-morris.html">Morris</a></li>
+                                    <li><a href="chart-chartjs.html">ChartJs</a></li>
+                                    <li><a href="chart-chartist.html">Chartist </a></li>
+                                    <li><a href="chart-amchart.html">AmChart</a></li>
+                                    <li><a href="chart-echart.html">EChart</a></li>
+                                    <li><a href="chart-sparkline.html">Sparkline</a></li>
+                                    <li><a href="chart-peity.html">Peity</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <div class="slimScrollBar" style="background: rgb(220, 220, 220); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; left: 1px; height: 581px;"></div>
+                <div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; left: 1px;"></div>
+            </div>
+            <!-- End Sidebar scroll-->
+        </div>
+        <!-- End Left Sidebar  -->
+        <!-- Page wrapper  -->
+        <div class="page-wrapper" style="min-height: 155px;">
+            {% block content %}
+            {% endblock content %}
+            <!-- Container fluid  -->
+
+            <!-- End Container fluid  -->
+            <!-- footer -->
+            <footer class="footer"> © 2018 All rights reserved. Template designed by Group ONC</footer>
+            <!-- End footer -->
+        </div>
+        <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'js/lib/bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'js/lib/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'js/jquery.slimscroll.js' %}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'js/sidebarmenu.js' %}"></script>
+    <!--stickey kit -->
+    <script src="{% static 'js/lib/sticky-kit-master/dist/sticky-kit.min.js' %}"></script>
+
+
+    <script src="{% static 'js/lib/datamap/d3.min.js' %}"></script>
+    <script src="{% static 'js/lib/datamap/topojson.js' %}"></script>
+    <script src="{% static 'js/lib/datamap/datamaps.world.min.js' %}"></script>
+    <script src="{% static 'js/lib/datamap/datamap-init.js' %}"></script>
+
+    <script src="{% static 'js/lib/weather/jquery.simpleWeather.min.js' %}"></script>
+    <script src="{% static 'js/lib/weather/weather-init.js' %}"></script>
+    <script src="{% static 'js/lib/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/lib/owl-carousel/owl.carousel-init.js' %}"></script>
+
+
+    <script src="{% static 'js/lib/chartist/chartist.min.js' %}"></script>
+    <script src="{% static 'js/lib/chartist/chartist-plugin-tooltip.min.js' %}"></script>
+    <script src="{% static 'js/lib/chartist/chartist-init.js' %}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'js/custom.min.js' %}"></script>
+
+    <!--Data table-->
+    <script src="{% static 'DataTables/datatables.min.js' %}"></script>
+
+    <!--Javascript-->
+    <script src="{% static 'js/scriptdatatable.js' %}"></script>
+</body>
+
+</html>
