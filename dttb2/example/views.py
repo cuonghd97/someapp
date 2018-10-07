@@ -26,3 +26,6 @@ def dttable(request):
         a.age = request.POST['age']
         a.save()
     return render(request, 'pages/home.html')
+
+# def getTable(request):
+#     a = table.objects.all();

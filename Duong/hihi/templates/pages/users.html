@@ -1,0 +1,26 @@
+{% extends "pages/base.html" %}
+
+{% block content %}
+
+<table id="tbl">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthday</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in users %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.userName}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.birthday}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
